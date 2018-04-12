@@ -7,13 +7,15 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/register',function(req,res,next){ 
-  models.usuario.findAll({where : {id: 1}}).then(function(usuario){
+router.get('/register',function(req,res,next){ 
+  models.usuario.findAll().then(function(usuario){
     res.send(usuario);
+  });
 
-  })
+
 
 });
+
 
 
 
